@@ -43,6 +43,7 @@ class AdnTrazo{
      int azul;
      int verde;
      int alpha;
+     //mejorar este metodo
     return new AdnTrazo(){
      
       this.rojo=rojo;
@@ -53,6 +54,10 @@ class AdnTrazo{
       
     };
   } 
+  public void mutacion(){
+  
+  }
+  
   
   
 }
