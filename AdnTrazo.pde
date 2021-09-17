@@ -55,6 +55,7 @@ class AdnTrazo{
     };
   } 
   public void mutacion(){
+    //acompletar
   
   }
   
