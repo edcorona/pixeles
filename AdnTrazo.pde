@@ -39,20 +39,14 @@ class AdnTrazo{
   }
   
   public AdnTrazo Clone(){
-     int rojo;
-     int azul;
-     int verde;
-     int alpha;
-     //mejorar este metodo
-    return new AdnTrazo(){
      
-      this.rojo=rojo;
-      this.azul=azul;
-      this.verde=verde;
-      this.alpha=alpha;
-      
-      
-    };
+     AdnTrazo temp = new AdnTrazo();
+     temp.setsetRojo(this.rojo);
+     temp.setsetAzul(this.azul);
+     temp.setsetVerde(this.verde);
+     temp.setsetAlpha(this.alpha);
+     
+     return temp;
   } 
   public void mutacion(){
     //acompletar
