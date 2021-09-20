@@ -28,28 +28,31 @@ class AdnTrazo{
     return this.alpha=alpha;
   }
   public void Init(){
-    int Rojo=getRojo();
-    Rojo= int(random(0,255));
-    int Azul=getAzul();
-    Azul= int(random(0,255));
-    int Verde=getVerde();
-    Verde= int(random(0,255));
-    int Alpha=getAlpha();
-    Alpha= int(random(10,60)); 
+   
+    rojo= int(random(0,255));
+   
+    azul= int(random(0,255));
+  
+    verde= int(random(0,255));
+   
+    alpha= int(random(10,60)); 
   }
   
   public AdnTrazo Clone(){
      
      AdnTrazo temp = new AdnTrazo();
-     temp.setsetRojo(this.rojo);
-     temp.setsetAzul(this.azul);
-     temp.setsetVerde(this.verde);
-     temp.setsetAlpha(this.alpha);
+     temp.setRojo(this.rojo);
+     temp.setAzul(this.azul);
+     temp.setVerde(this.verde);
+     temp.setAlpha(this.alpha);
      
      return temp;
   } 
   public void mutacion(){
     //acompletar
+    if(Herramientas.VaMutar(Configuracion.ActivoRojoRadioMutacion)){
+      rojo=int(random(0,255));
+    }
   
   }
   
