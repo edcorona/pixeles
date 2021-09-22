@@ -28,7 +28,12 @@ public class DnaPunto{
       return temp;  
   }
   public void VaMutar(){
-  
+    if(Herramientas.VaMutar(Configuracion.ActiveMovePuntoMutacionRadio))
+    {
+      X= int(random(0,Herramientas.MaxWidth));
+      Y= int(random(0, Herramientas.MaxHeight));
+      
+    }
   }
 
 }
