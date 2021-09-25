@@ -5,8 +5,8 @@ public class DnaTriangulo{
   public ArrayList<DnaPunto> getPuntos(){
    return Puntos;
   }
-  public ArrayList<DnaPunto> setPuntos(ArrayList Puntos) {
-    return this.Puntos=Puntos;
+  public void setPuntos(ArrayList Puntos) {
+    this.Puntos=Puntos;
   }
   
   public AdnTrazo getTrazo(){
@@ -20,6 +20,31 @@ public class DnaTriangulo{
  {
    Puntos = new ArrayList<DnaPunto>();
    
-   String origin= new DnaPunto();
+   DnaPunto origin= new DnaPunto();
+   origin.Init();
+   
+   for(int i=0; i< Configuracion.AcitvePointPerTriangleMin; i++){
+     DnaPunto punto= new DnaPunto();
+     punto.setX(Math.min(Math.max(0, origin.getX() + int(random(-3,3))), Herramientas.MaxWidth));
+     punto.setY(Math.min(Math.max(0, origin.getY()+ int(random(-3,3))), Herramientas.MaxHeight));
+     
+     Puntos.add(punto);
+   }
+   
+   AdnTrazo trazo= new AdnTrazo();
+   trazo.Init();
+ }
+ 
+ public DnaTriangulo Clone(){
+   DnaTriangulo nuevoTriangulo = new DnaTriangulo();
+   
+   nuevoTriangulo.Puntos = new ArrayList<DnaPunto>();
+   nuevoTriangulo.trazo = trazo.Clone();
+   
+   for(int i=0;i<Puntos.size();i++){
+     
+     nuevoTriangulo.Puntos.add(Puntos.get(i).Clone());
+   }
+   return nuevoTriangulo;
  }
 }

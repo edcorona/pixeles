@@ -6,26 +6,26 @@ class AdnTrazo{
   public int getRojo(){
    return rojo;
   }
-  public int setRojo(int rojo) {
-    return this.rojo=rojo;
+  public void setRojo(int rojo) {
+    this.rojo=rojo;
   }
   public int getVerde(){
     return verde;
   }
-  public int setVerde(int verde){
-    return this.verde=verde;
+  public void setVerde(int verde){
+     this.verde=verde;
   }
   public int getAzul(){
     return azul;
   }
-  public int setAzul(int azul){
-    return this.azul=azul;
+  public void setAzul(int azul){
+     this.azul=azul;
   }
   public int getAlpha(){
     return alpha;
   }
-  public int setAlpha(int alpha){
-    return this.alpha=alpha;
+  public void setAlpha(int alpha){
+     this.alpha=alpha;
   }
   public void Init(){
    
