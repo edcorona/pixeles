@@ -38,8 +38,43 @@ public class AdnDibujo{
     
     for(int i =0; i<Configuracion.ActiveTriangleMin; i++){
       //addtriangulo()
+      AddTriangulo();
+    }
+     SetSucio(); 
+  }
+  //mejorar
+  public DnaTriangulo Clone(){
+    DnaTriangulo dibujo = new DnaTriangulo();
+    dibujo.triangulos= new ArrayList<DnaTriangulo>();
+  }
+  public void AddTriangulo(){
+    if(triangulos.size()<Configuracion.ActiveTrianguleMax){
+      DnaTriangulo nuevoTriangulo= new DnaTriangulo();
+      nuevoTriangulo.Init();
+      
+      int index=int(random(0, triangulos.size()));
+      //add en vez de insert
+      triangulos.add(index, nuevoTriangulo);
+      SetSucio();      
     }
   }
+  public void RemoveTriangulo(){
+    if(triangulos.size()> Configuracion.ActiveTriangleMin){
+      int index= int(random(0, triangulos.size()));
+      triangulos.remove(index);
+      SetSucio(); 
+    }
+  }
+  public void MoveTriangulo(){
+    if(triangulos.size() <1){
+      int index = int(random(0, triangulos.size()));
+      DnaTriangulo trian= triangulos.get(index);
+      index= int(random(0, triangulos.size()));
+      triangulos.add(index, trian);
+      SetSucio(); 
+    }
+  }
+  
   
   
 }
