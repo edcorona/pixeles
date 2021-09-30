@@ -47,4 +47,23 @@ public class DnaTriangulo{
    }
    return nuevoTriangulo;
  }
+ 
+ public void Mutacion(AdnDibujo dibujo){
+   if(Herramientas.VaMutar(Configuracion.ActivoAddPuntoRadioMutacion)){
+     AddPunto(dibujo);
+   }
+   
+ }
+ //duda
+ private void AddPunto(ArrayList<AdnDibujo> dibujo){
+   if(Puntos.size()< Configuracion.ActivePuntosPorTrianguloMax){
+     if(dibujo.size() < Configuracion.ActivePuntosMax){
+       DnaPunto nuevoPunto= new DnaPunto();
+       int index = int(random(1, Puntos.size()-1));
+       
+       //duda
+       
+     }
+   }
+ }
 }

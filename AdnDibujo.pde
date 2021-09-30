@@ -46,6 +46,7 @@ public class AdnDibujo{
   public DnaTriangulo Clone(){
     DnaTriangulo dibujo = new DnaTriangulo();
     dibujo.triangulos= new ArrayList<DnaTriangulo>();
+    //sin terminar
   }
   public void AddTriangulo(){
     if(triangulos.size()<Configuracion.ActiveTrianguleMax){
