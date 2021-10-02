@@ -53,7 +53,27 @@ public class DnaTriangulo{
      AddPunto(dibujo);
    }
    
+   if(Herramientas.VaMutar(Configuracion.ActivoRemovePuntoRadioMutacion)){
+     RemovePunto(dibujo);
+   }
+   
+   trazo.Mutacion(dibujo);
+   
+   
+   
  }
+ 
+ private void RemovePunto(AdnDibujo dibujo){
+   if(Puntos.size() > Configuracion.AcitvePointPerTriangleMin){
+     if(dibujo.size() > Configuracion.ActiveTriangleMin){
+       int index = int(random(0, Puntos.size()));
+       Puntos.remove(index);
+       
+       dibujo.SetSucio();
+     }
+   }
+ }
+ 
  //duda
  private void AddPunto(ArrayList<AdnDibujo> dibujo){
    if(Puntos.size()< Configuracion.ActivePuntosPorTrianguloMax){
@@ -62,7 +82,16 @@ public class DnaTriangulo{
        int index = int(random(1, Puntos.size()-1));
        
        //duda
+       DnaPunto prev = Puntos.get(index - 1);
        
+       DnaPunto next = Puntos.get(index);
+       
+       nuevoPunto.X = (prev.X + next.X)/2;
+       nuevoPunto.Y = (prev.Y + next.Y)/2;
+       
+       Puntos.add(index,nuevoPunto);
+       
+       dibujo.SetSucio();
      }
    }
  }
