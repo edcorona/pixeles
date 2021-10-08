@@ -27,13 +27,24 @@ public class DnaPunto{
       
       return temp;  
   }
-  public void VaMutar(){
+  public void VaMutar(AdnDibujo dibujo){
     if(Herramientas.VaMutar(Configuracion.ActiveMovePuntoMutacionRadio))
     {
       X= int(random(0,Herramientas.MaxWidth));
       Y= int(random(0, Herramientas.MaxHeight));
-      
+      dibujo.SetSucio();
     }
+    if(Herramientas.VaMutar(Configuracion.AcitveMovePuntoMidMutacionRadio))
+      {
+        //mejorar
+        X=Math.min(Math.max(0,X+int(random(-Configuracion.AcitveMovePointRangeMid,Configuracion.AcitveMovePointRangeMid)), Herramientas.MaxWidth));
+        //mejorar
+        Y=Math.min(Math.max(0,Y+int(random(-Configuracion.AcitveMovePointRangeMid,Configuracion.AcitveMovePointRangeMid)), Herramientas.MaxHeight));
+        dibujo.SetSucio();
+      }
+      if(Herramientas.VaMutar(Configuracion.AcitveMovePuntoMinMutacionRadio)){
+        //lo mismo mejorar
+      }
   }
 
 }

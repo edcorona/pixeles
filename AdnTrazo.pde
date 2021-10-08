@@ -48,14 +48,27 @@ class AdnTrazo{
      
      return temp;
   } 
-  public void mutacion(){
+  public void mutacion(AdnDibujo dibujo){
     //acompletar
     if(Herramientas.VaMutar(Configuracion.ActivoRojoRadioMutacion)){
       rojo=int(random(0,255));
+      dibujo.SetSucio();
+    }
+    if(Herramientas.VaMutar(Configuracion.ActivoVerdeRadioMutacion)){
+      verde=int(random(0,255));
+      dibujo.SetSucio();
+    }
+    if(Herramientas.VaMutar(Configuracion.ActivoAzulRadioMutacion)){
+      azul=int(random(0,255));
+      dibujo.SetSucio();
+    }
+    if(Herramientas.VaMutar(Configuracion.ActivoAlphaRadioMutacion)){
+      alpha=int(random(0,255));
+      dibujo.SetSucio();
     }
   
   }
   
-  
+  //terminada
   
 }

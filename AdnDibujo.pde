@@ -44,7 +44,7 @@ public class AdnDibujo{
   }
   //mejorar
   public DnaTriangulo Clone(){
-    DnaTriangulo dibujo = new DnaTriangulo();
+    AdnDibujo dibujo = new AdnDibujo();
     dibujo.triangulos= new ArrayList<DnaTriangulo>();
     //sin terminar
   }
