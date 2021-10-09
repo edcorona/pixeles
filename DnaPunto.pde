@@ -43,8 +43,13 @@ public class DnaPunto{
         dibujo.SetSucio();
       }
       if(Herramientas.VaMutar(Configuracion.AcitveMovePuntoMinMutacionRadio)){
-        //lo mismo mejorar
+        // mejorar
+        X=Math.min(Math.max(0,X+int(random(-Configuracion.ActiveMovePointRangeMin,Configuracion.ActiveMovePointRangeMin)), Herramientas.MaxWidth));
+        //mejorar
+        Y=Math.min(Math.max(0,Y+int(random(-Configuracion.ActiveMovePointRangeMin,Configuracion.ActiveMovePointRangeMin)), Herramientas.MaxHeight));
+        dibujo.SetSucio();
       }
+      //mejorar ultimo metodo
   }
 
 }

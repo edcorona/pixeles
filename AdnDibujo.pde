@@ -46,7 +46,24 @@ public class AdnDibujo{
   public DnaTriangulo Clone(){
     AdnDibujo dibujo = new AdnDibujo();
     dibujo.triangulos= new ArrayList<DnaTriangulo>();
-    //sin terminar
+    //duda
+    for(int i =0;i<triangulos.size();i++){
+      dibujo.triangulos.add();
+    }
+  }
+  public void Mutacion(){
+    if(Herramientas.VaMutar(Configuracion.ActiveAddTrianguloRadioMutacion)){
+      AddTriangulo();
+    }
+    if(Herramientas.VaMutar(Configuracion.ActiveRemoveTrianguloRadioMutacion)){
+      RemoveTriangulo();
+    }
+    if(Herramientas.VaMutar(Configuracion.ActiveMoveTrianguloRadioMutacion)){
+      MoveTriangulo();
+    }
+    for(int i=0;i<triangulos.size();i++){
+      //duda
+    }
   }
   public void AddTriangulo(){
     if(triangulos.size()<Configuracion.ActiveTrianguleMax){
