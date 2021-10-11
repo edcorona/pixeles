@@ -43,13 +43,15 @@ public class AdnDibujo{
      SetSucio(); 
   }
   //mejorar
-  public DnaTriangulo Clone(){
+  public AdnDibujo Clone(){
     AdnDibujo dibujo = new AdnDibujo();
     dibujo.triangulos= new ArrayList<DnaTriangulo>();
     //duda
     for(int i =0;i<triangulos.size();i++){
-      dibujo.triangulos.add();
+      DnaTriangulo triangulo= triangulos.get(i);
+      dibujo.triangulos.add(triangulo.Clone());   
     }
+    return dibujo;
   }
   public void Mutacion(){
     if(Herramientas.VaMutar(Configuracion.ActiveAddTrianguloRadioMutacion)){

@@ -37,16 +37,16 @@ public class DnaPunto{
     if(Herramientas.VaMutar(Configuracion.AcitveMovePuntoMidMutacionRadio))
       {
         //mejorar
-        X=Math.min(Math.max(0,X+int(random(-Configuracion.AcitveMovePointRangeMid,Configuracion.AcitveMovePointRangeMid)), Herramientas.MaxWidth));
+        X=Math.min(Math.max(0,X+int(random(-Configuracion.AcitveMovePointRangeMid,Configuracion.AcitveMovePointRangeMid))), Herramientas.MaxWidth);
         //mejorar
-        Y=Math.min(Math.max(0,Y+int(random(-Configuracion.AcitveMovePointRangeMid,Configuracion.AcitveMovePointRangeMid)), Herramientas.MaxHeight));
+        Y=Math.min(Math.max(0,Y+int(random(-Configuracion.AcitveMovePointRangeMid,Configuracion.AcitveMovePointRangeMid))), Herramientas.MaxHeight);
         dibujo.SetSucio();
       }
       if(Herramientas.VaMutar(Configuracion.AcitveMovePuntoMinMutacionRadio)){
         // mejorar
-        X=Math.min(Math.max(0,X+int(random(-Configuracion.ActiveMovePointRangeMin,Configuracion.ActiveMovePointRangeMin)), Herramientas.MaxWidth));
+        X=Math.min(Math.max(0,X+int(random(-Configuracion.ActiveMovePointRangeMin,Configuracion.ActiveMovePointRangeMin))), Herramientas.MaxWidth);
         //mejorar
-        Y=Math.min(Math.max(0,Y+int(random(-Configuracion.ActiveMovePointRangeMin,Configuracion.ActiveMovePointRangeMin)), Herramientas.MaxHeight));
+        Y=Math.min(Math.max(0,Y+int(random(-Configuracion.ActiveMovePointRangeMin,Configuracion.ActiveMovePointRangeMin))), Herramientas.MaxHeight);
         dibujo.SetSucio();
       }
       //mejorar ultimo metodo
