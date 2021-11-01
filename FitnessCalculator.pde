@@ -2,31 +2,29 @@
   class FitnessCalculator{
   public  double GetDrawingFitness(AdnDibujo nuevoDibujo, int[][] sourceColors){
     double error = 0;
+    //graphics es para pintar
+    //render para pintar
+    
+    PImage currentImage="";
     
      for(int y=0; y< Herramientas.MaxHeight; y++){
        for(int x=0; x < Herramientas.MaxWidth; x++){
-         color c1 = GetPixel();
-         color c2 = sourceColors[x, y];
+         color c1 = GetPixel(currentImage, x, y);
+         color c2 = sourceColors[x][y];
          
-         
+         double pixelError = GetColorFitness(c1,c2);
+         error += pixelError;
        }
      }
     
   }
-  private color GetPixel()
+  private color GetPixel(PImage currentImage, int x, int y)
   {
-    PImage currentImage;
     //pasar imagen aqui
-    currentImage=loadImage("");
-    currentImage.loadPixels();
-    for(int y=0; y<height; y++)
-    {  
-      for(int x=0;x<width; x++){
+        currentImage.loadPixels();
         int loc = x + y*width;
         color pix= currentImage.pixels[loc];
-      }
-    }
-  
+        return pix;
   }
   //metodo de obtener color fitness
   private double GetColorFitness(color c1, color c2){
