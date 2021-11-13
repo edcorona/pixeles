@@ -1,14 +1,40 @@
 
  static class Renderer {
+   public PGraphics g;
    //render a drawing
   public static void Render(AdnDibujo dibujo, PGraphics p,int scale){
     p.clear();
      ArrayList<DnaTriangulo> triangulos = dibujo.getTriangulos(); 
     for(int i=0;i<triangulos.size();i++){
-      Render(triangulos, p, scale);
+      Render(triangulos.get(i), p, scale);
     }
   }
   //render a triangle
+  private static void Render(DnaTriangulo triangulo, PGraphics g, int scale){
+    int[] puntos= getGPuntos(triangulo.getPuntos(), scale);
+    g.triangle(puntos[0],puntos[1],puntos[2],puntos[3],puntos[4],puntos[5]);
+  }
+  //modo processing
+  public void triangleRender(float x1, float y1, float x2, float y2, float x3, float y3){
+    g.triangle(x1,y1,x2,y2,x3,y3);
+  }
+  
+  
+  
+  private static int[] getGPuntos(ArrayList<DnaPunto> puntos,int scale){
+    int[] pts = new int[puntos.size()*2];
+    int i = 0;
+    for(int pt=0;pt<puntos.size(); pt++){
+      pts[i++] = puntos.get(pt).X*scale;
+      pts[i++] = puntos.get(pt).Y*scale;
+    }
+    return pts;
+  }
+  //retornar un color brush argb
+  private static color getGdiTrazo(AdnTrazo b){
+    return color();
+  }
+  
   
 
 }
