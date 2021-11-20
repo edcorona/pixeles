@@ -1,11 +1,11 @@
   import java.io.*;
   class FitnessCalculator{
-  public  double GetDrawingFitness(AdnDibujo nuevoDibujo, int[][] sourceColors){
+  public  double GetDrawingFitness(AdnDibujo nuevoDibujo, int[][] sourceColors,PImage currentImage){
     double error = 0;
     //graphics es para pintar
     //render para pintar
     
-    PImage currentImage="";
+    
     
      for(int y=0; y< Herramientas.MaxHeight; y++){
        for(int x=0; x < Herramientas.MaxWidth; x++){
@@ -14,9 +14,9 @@
          
          double pixelError = GetColorFitness(c1,c2);
          error += pixelError;
-       }
+       }    
      }
-    
+     return error;
   }
   private color GetPixel(PImage currentImage, int x, int y)
   {

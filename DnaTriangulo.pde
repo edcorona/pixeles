@@ -42,9 +42,9 @@ public class DnaTriangulo{
    nuevoTriangulo.trazo = trazo.Clone();
    
    for(int i=0;i<Puntos.size();i++){
-     
      nuevoTriangulo.Puntos.add(Puntos.get(i).Clone());
    }
+   
    return nuevoTriangulo;
  }
  

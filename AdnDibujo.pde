@@ -1,4 +1,4 @@
-public class AdnDibujo{
+ class AdnDibujo{
   ArrayList<DnaTriangulo> triangulos;
   boolean EstaSucio;
   
@@ -64,7 +64,7 @@ public class AdnDibujo{
       MoveTriangulo();
     }
     for(int i=0;i<triangulos.size();i++){
-      //duda
+      triangulos.get(i).Mutacion(this);
     }
   }
   public void AddTriangulo(){
@@ -87,12 +87,14 @@ public class AdnDibujo{
   }
   public void MoveTriangulo(){
     if(triangulos.size() <1){
-      int index = int(random(0, triangulos.size()));
+      return;
+    }
+    int index = int(random(0, triangulos.size()));
+      println(index);
       DnaTriangulo trian= triangulos.get(index);
       index= int(random(0, triangulos.size()));
       triangulos.add(index, trian);
       SetSucio(); 
-    }
   }
   
   
