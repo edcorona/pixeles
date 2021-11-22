@@ -27,6 +27,7 @@
       cuantosPuntos += triangulo.getPuntos().size();
     }
     return cuantosPuntos;
+    //duda de terminacion
   
   }
   public void SetSucio(){
@@ -100,3 +101,4 @@
   
   
 }
+//terminada todo bien

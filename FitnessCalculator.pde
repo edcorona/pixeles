@@ -16,6 +16,7 @@
          error += pixelError;
        }    
      }
+     //duda el usa Unlockbits aqui
      return error;
   }
   private color GetPixel(PImage currentImage, int x, int y)
@@ -36,3 +37,4 @@
     
   }
 }
+//terminadad duda en una

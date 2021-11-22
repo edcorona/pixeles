@@ -63,12 +63,12 @@ class AdnTrazo{
       dibujo.SetSucio();
     }
     if(Herramientas.VaMutar(Configuracion.ActivoAlphaRadioMutacion)){
-      alpha=int(random(0,255));
+      alpha=int(random(30,60));
       dibujo.SetSucio();
     }
   
   }
   
-  //terminada
+  //terminada todo bien
   
 }

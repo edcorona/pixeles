@@ -62,7 +62,7 @@ public class DnaTriangulo{
      DnaPunto p= Puntos.get(i);
      p.VaMutar(dibujo);
    }
-   
+   //duda de terminacion
    
    
  }
@@ -78,14 +78,14 @@ public class DnaTriangulo{
    }
  }
  
- //duda
+ 
  private void AddPunto(AdnDibujo dibujo){
    if(Puntos.size()< Configuracion.ActivePuntosPorTrianguloMax){
      if(dibujo.CuantosPuntos() < Configuracion.ActivePuntosMax){
        DnaPunto nuevoPunto= new DnaPunto();
        int index = int(random(1, Puntos.size()-1));
        
-       //duda
+       
        DnaPunto prev = Puntos.get(index - 1);
        
        DnaPunto next = Puntos.get(index);
@@ -100,3 +100,4 @@ public class DnaTriangulo{
    }
  }
 }
+//terminado duda en mutacion

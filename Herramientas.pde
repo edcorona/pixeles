@@ -31,8 +31,10 @@ public static boolean VaMutar(int mutationRate)
     return true;
   }
   return false;
+  //duda de return
   
 }
 
 
 }
+//terminada duda en VaMutar

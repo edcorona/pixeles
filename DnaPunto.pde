@@ -49,7 +49,7 @@ public class DnaPunto{
         Y=Math.min(Math.max(0,Y+int(random(-Configuracion.ActiveMovePointRangeMin,Configuracion.ActiveMovePointRangeMin))), Herramientas.MaxHeight);
         dibujo.SetSucio();
       }
-      //mejorar ultimo metodo
+      //terminado todo bien
   }
 
 }
