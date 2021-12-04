@@ -1,18 +1,26 @@
 
   class Renderer {
-   public PGraphics g;
+   
    //render a drawing
   public  void Render(AdnDibujo dibujo, PGraphics p,int scale){
-    p.clear();
+    //p.clear();
      ArrayList<DnaTriangulo> triangulos = dibujo.getTriangulos(); 
     for(int i=0;i<triangulos.size();i++){
+    
       Render(triangulos.get(i), p, scale);
     }
   }
   //render a triangle
   private  void Render(DnaTriangulo triangulo, PGraphics g, int scale){
     int[] puntos= getGPuntos(triangulo.getPuntos(), scale);
-    g.triangle(puntos[0],puntos[1],puntos[2],puntos[3],puntos[4],puntos[5]);
+     AdnTrazo trazo= triangulo.getTrazo();
+     //beginDraw();
+     stroke(trazo.getRojo(),trazo.getVerde(),trazo.getAzul(),trazo.getAlpha());
+     fill(trazo.getRojo(),trazo.getVerde(),trazo.getAzul(),trazo.getAlpha());
+    triangle(puntos[0],puntos[1],puntos[2],puntos[3],puntos[4],puntos[5]);
+    
+    //endDraw();
+    
   }
   //modo processing
   //public void triangleRender(float x1, float y1, float x2, float y2, float x3, float y3){

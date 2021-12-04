@@ -91,7 +91,7 @@
       return;
     }
     int index = int(random(0, triangulos.size()));
-      println(index);
+      
       DnaTriangulo trian= triangulos.get(index);
       index= int(random(0, triangulos.size()));
       triangulos.add(index, trian);

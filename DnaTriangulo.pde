@@ -31,7 +31,7 @@ public class DnaTriangulo{
      Puntos.add(punto);
    }
    
-   AdnTrazo trazo= new AdnTrazo();
+   trazo= new AdnTrazo();
    trazo.Init();
  }
  

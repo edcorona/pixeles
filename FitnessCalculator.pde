@@ -1,11 +1,12 @@
   import java.io.*;
   class FitnessCalculator{
-  public  double GetDrawingFitness(AdnDibujo nuevoDibujo, int[][] sourceColors,PImage currentImage){
+  public  double GetDrawingFitness(AdnDibujo nuevoDibujo,PGraphics g, int[][] sourceColors,PImage currentImage, Renderer render){
     double error = 0;
     //graphics es para pintar
     //render para pintar
     
     
+    render.Render(nuevoDibujo,g,1);
     
      for(int y=0; y< Herramientas.MaxHeight; y++){
        for(int x=0; x < Herramientas.MaxWidth; x++){

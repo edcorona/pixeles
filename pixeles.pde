@@ -5,15 +5,18 @@ private int selected;
 private int generacion;
 private FitnessCalculator calculator;
 private double errorLevel = Double.MAX_VALUE;
+PGraphics g;
 PImage target ;
 void setup(){
   size(250,216);
   loadPixels();
-  target = loadImage("/data/geneticBird.png");
+  target = loadImage("/data/oops.png");
   updatePixels();
 }
 void draw()
 {
+  g= createGraphics(250,216);
+  Renderer render = new Renderer();
   setupSourceColorMatrix();
   currentDibujo = getNewInicializacion();
   lastSelected = 0;
@@ -24,7 +27,8 @@ void draw()
   if(nuevoDibujo.getSucio()){
     generacion++;
     
-    double nuevoErrorlevel = calculator.GetDrawingFitness(nuevoDibujo, sourceColors,target);
+    double nuevoErrorlevel = calculator.GetDrawingFitness(nuevoDibujo, g, sourceColors,target, render);
+    
     if(nuevoErrorlevel <= errorLevel){
       selected ++;
       
