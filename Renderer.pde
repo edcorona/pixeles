@@ -17,8 +17,8 @@
      //beginDraw();
      stroke(trazo.getRojo(),trazo.getVerde(),trazo.getAzul(),trazo.getAlpha());
      fill(trazo.getRojo(),trazo.getVerde(),trazo.getAzul(),trazo.getAlpha());
-    triangle(puntos[0],puntos[1],puntos[2],puntos[3],puntos[4],puntos[5]);
-    
+    triangle(puntos[0],puntos[1],puntos[2],puntos[3],puntos[4],puntos[1]);
+    //println(puntos[0]+","+puntos[1]+","+puntos[2]+","+puntos[3]+","+puntos[4]+","+puntos[5]);
     //endDraw();
     
   }

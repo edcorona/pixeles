@@ -52,18 +52,22 @@ class AdnTrazo{
     //acompletar
     if(Herramientas.VaMutar(Configuracion.ActivoRojoRadioMutacion)){
       rojo=random(0,255);
+      //println("rojo: "+rojo);
       dibujo.SetSucio();
     }
     if(Herramientas.VaMutar(Configuracion.ActivoVerdeRadioMutacion)){
       verde=random(0,255);
+      //println("verde: "+ verde);
       dibujo.SetSucio();
     }
     if(Herramientas.VaMutar(Configuracion.ActivoAzulRadioMutacion)){
       azul=random(0,255);
+      //println("azul: "+azul);
       dibujo.SetSucio();
     }
     if(Herramientas.VaMutar(Configuracion.ActivoAlphaRadioMutacion)){
       alpha=random(25.5,153);
+      //println("alpha: "+alpha);
       dibujo.SetSucio();
     }
   

@@ -22,8 +22,8 @@ public static class Herramientas{
   
 }
 
-public static int MaxWidth = 250;
-public static int MaxHeight = 216;
+public static int MaxWidth = 200;
+public static int MaxHeight = 200;
 
 public static boolean VaMutar(int mutationRate)
 {

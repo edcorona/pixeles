@@ -8,14 +8,14 @@ private double errorLevel = Double.MAX_VALUE;
 PGraphics g;
 PImage target ;
 void setup(){
-  size(250,216);
+  size(200,200);
   loadPixels();
-  target = loadImage("/data/oops.png");
+  target = loadImage("/data/ml.bmp");
   updatePixels();
 }
 void draw()
 {
-  g= createGraphics(250,216);
+  g= createGraphics(200,200);
   Renderer render = new Renderer();
   setupSourceColorMatrix();
   currentDibujo = getNewInicializacion();
