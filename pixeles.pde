@@ -56,7 +56,7 @@ private void setupSourceColorMatrix(){
       float a = alpha(target.pixels[loc]);
       
       sourceColors[x][y]= color(r,g,b,a);
-      
+      //println("rojo: "+ r + "verder: "+ g +"azul: "+ b +"alpha: "+ a);
     }
   }
   

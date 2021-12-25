@@ -1,6 +1,6 @@
-public class Configuracion{
-  public static final int ActivoAddPuntoRadioMutacion=1000;
-  public static final int ActivoRemovePuntoRadioMutacion=1000;
+class Configuracion{
+  public static final int ActivoAddPuntoRadioMutacion=1500;
+  public static final int ActivoRemovePuntoRadioMutacion=1500;
   public static final int ActivoRojoRadioMutacion = 1500;
   public static final int ActivoAzulRadioMutacion = 1500;
   public static final int ActivoVerdeRadioMutacion = 1500;

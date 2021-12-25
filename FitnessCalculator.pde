@@ -10,7 +10,9 @@
     
      for(int y=0; y< Herramientas.MaxHeight; y++){
        for(int x=0; x < Herramientas.MaxWidth; x++){
+         //obtener el pixel del lienzo no la imagen
          color c1 = GetPixel(currentImage, x, y);
+         
          color c2 = sourceColors[x][y];
          
          double pixelError = GetColorFitness(c1,c2);

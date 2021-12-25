@@ -1,35 +1,43 @@
  class AdnDibujo{
+   //variables de clase
+   //lista de tipo DnaTriangulo llamada triangulos
   ArrayList<DnaTriangulo> triangulos;
+  //variable booleana llamada EstaSucio
   boolean EstaSucio;
   
+  //metodos
+  
+  //metodo que modifica la lista triangulos
   public void setTriangulos(ArrayList triangulos) {
     this.triangulos=triangulos;
   }
-  
+  //metodo que devuelve la lista triangulos
   public ArrayList getTriangulos(){
     return triangulos;
   }
-  
+  //metodo que regresa EstaSucio 
   public boolean getSucio(){
   return EstaSucio;
   }
-  
+  //metodo que modifica el valor de EstaSucio
   public void setSucio(boolean EstaSucio){
     this.EstaSucio=EstaSucio;
   }
   
+  //metodo entero para contabilizar puntos
   public int CuantosPuntos(){
-     
+    //instanciacion de clase DnaTriangulo con nombre triangulo
     DnaTriangulo triangulo= new DnaTriangulo();
+    //variable entera para contabilizar puntos
     int cuantosPuntos =0;
     for(int i=0;i<triangulos.size();i++){
       triangulo=triangulos.get(i);
       cuantosPuntos += triangulo.getPuntos().size();
     }
     return cuantosPuntos;
-    //duda de terminacion
-  
   }
+  
+  //modifica el valor de EstaSucio a verdadero
   public void SetSucio(){
     EstaSucio=true;
   }
