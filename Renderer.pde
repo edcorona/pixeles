@@ -2,39 +2,39 @@
   class Renderer {
    
    //render a drawing
-  public  void Render(AdnDibujo dibujo, PGraphics p,int scale){
-    //p.clear();
+  public  void Render(AdnDibujo dibujo){
+     clear();
      ArrayList<DnaTriangulo> triangulos = dibujo.getTriangulos(); 
     for(int i=0;i<triangulos.size();i++){
     
-      Render(triangulos.get(i), p, scale);
+      Render(triangulos.get(i));
     }
   }
   //render a triangle
-  private  void Render(DnaTriangulo triangulo, PGraphics g, int scale){
-    int[] puntos= getGPuntos(triangulo.getPuntos(), scale);
+  private  void Render(DnaTriangulo triangulo){
+    int[][] puntos= getGPuntos(triangulo.getPuntos());
      AdnTrazo trazo= triangulo.getTrazo();
-     //beginDraw();
      stroke(trazo.getRojo(),trazo.getVerde(),trazo.getAzul(),trazo.getAlpha());
      fill(trazo.getRojo(),trazo.getVerde(),trazo.getAzul(),trazo.getAlpha());
-    triangle(puntos[0],puntos[1],puntos[2],puntos[3],puntos[4],puntos[1]);
-    //println(puntos[0]+","+puntos[1]+","+puntos[2]+","+puntos[3]+","+puntos[4]+","+puntos[5]);
-    //endDraw();
-    
+    //triangle(puntos[0][0],puntos[0][1],puntos[1][0],puntos[1][1],puntos[2][0],puntos[2][1]);
+    //quad(puntos[0][0],puntos[0][1],puntos[1][0],puntos[1][1],puntos[2][0],puntos[2][1],puntos[3][0],puntos[3][1]);
+    polygon(puntos);
   }
-  //modo processing
-  //public void triangleRender(float x1, float y1, float x2, float y2, float x3, float y3){
-    //g.triangle(x1,y1,x2,y2,x3,y3);
-  //}
-  
-  
-  
-  private  int[] getGPuntos(ArrayList<DnaPunto> puntos,int scale){
-    int[] pts = new int[puntos.size()*2];
+  void polygon(int[][] puntos){
+     beginShape();
+      for (int a = 0; a < puntos.length; a++) { 
+      vertex(puntos[a][0], puntos[a][1]);
+  }
+  endShape(CLOSE);
+  }
+  private  int[][] getGPuntos(ArrayList<DnaPunto> puntos){
+    
+    int[][] pts = new int[puntos.size()][2];
     int i = 0;
     for(int pt=0;pt<puntos.size(); pt++){
-      pts[i++] = puntos.get(pt).X*scale;
-      pts[i++] = puntos.get(pt).Y*scale;
+      pts[i][0] = puntos.get(pt).X;
+      pts[i][1] = puntos.get(pt).Y;
+      i++;
     }
     return pts;
   }

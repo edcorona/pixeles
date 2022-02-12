@@ -25,8 +25,8 @@ public class DnaTriangulo{
    
    for(int i=0; i< Configuracion.AcitvePointPerTriangleMin; i++){
      DnaPunto punto= new DnaPunto();
-     punto.setX(Math.min(Math.max(0, origin.getX() + int(random(-3,3))), Herramientas.MaxWidth));
-     punto.setY(Math.min(Math.max(0, origin.getY()+ int(random(-3,3))), Herramientas.MaxHeight));
+     punto.setX(Math.min(Math.max(0, origin.getX() + int(random(-3,3))), MaxWidth));
+     punto.setY(Math.min(Math.max(0, origin.getY()+ int(random(-3,3))), MaxHeight));
      
      Puntos.add(punto);
    }

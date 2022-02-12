@@ -49,25 +49,31 @@ class AdnTrazo{
      return temp;
   } 
   public void mutacion(AdnDibujo dibujo){
-    //acompletar
+    //duda
+    //condicional donde comprueba si desde la clase con su metodo VaMutar con la otra clase Confuguracion
+    //la variable ActivoRojoRadioMutacion = 1500
     if(Herramientas.VaMutar(Configuracion.ActivoRojoRadioMutacion)){
       rojo=random(0,255);
       //println("rojo: "+rojo);
       dibujo.SetSucio();
     }
+    //ActivoVerdeRadioMutacion = 1500
     if(Herramientas.VaMutar(Configuracion.ActivoVerdeRadioMutacion)){
       verde=random(0,255);
       //println("verde: "+ verde);
       dibujo.SetSucio();
     }
+    //ActivoAzulRadioMutacion = 1500
     if(Herramientas.VaMutar(Configuracion.ActivoAzulRadioMutacion)){
       azul=random(0,255);
       //println("azul: "+azul);
       dibujo.SetSucio();
     }
+    //ActivoAlphaRadioMutacion = 1500
     if(Herramientas.VaMutar(Configuracion.ActivoAlphaRadioMutacion)){
       alpha=random(25.5,153);
       //println("alpha: "+alpha);
+      //cambia el valor de boolean lo reinicia
       dibujo.SetSucio();
     }
   

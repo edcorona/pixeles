@@ -1,17 +1,20 @@
   import java.io.*;
   class FitnessCalculator{
-  public  double GetDrawingFitness(AdnDibujo nuevoDibujo,PGraphics g, int[][] sourceColors,PImage currentImage, Renderer render){
+  public  double GetDrawingFitness(AdnDibujo nuevoDibujo, int[][] sourceColors, Renderer render, int generacion){
     double error = 0;
     //graphics es para pintar
     //render para pintar
     
     
-    render.Render(nuevoDibujo,g,1);
-    
-     for(int y=0; y< Herramientas.MaxHeight; y++){
-       for(int x=0; x < Herramientas.MaxWidth; x++){
+    render.Render(nuevoDibujo);
+    PImage lienzo = get();
+         
+     for(int y=0; y< MaxHeight; y++){
+       for(int x=0; x < MaxWidth; x++){
          //obtener el pixel del lienzo no la imagen
-         color c1 = GetPixel(currentImage, x, y);
+         
+         //obtencion con get
+         color c1 = GetPixel(lienzo, x, y);
          
          color c2 = sourceColors[x][y];
          
@@ -20,15 +23,17 @@
        }    
      }
      //duda el usa Unlockbits aqui
+     textFont(f);
+    fill(255);
+     text("Generacion: " +generacion +" p: " + Configuracion.AcitvePointPerTriangleMin,15,15);
+     
      return error;
   }
   private color GetPixel(PImage currentImage, int x, int y)
   {
     //pasar imagen aqui
-        currentImage.loadPixels();
-        int loc = x + y*width;
-        color pix= currentImage.pixels[loc];
-        return pix;
+        return currentImage.get(x,y);
+        
   }
   //metodo de obtener color fitness
   private double GetColorFitness(color c1, color c2){
