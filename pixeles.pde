@@ -6,17 +6,19 @@ private FitnessCalculator calculator;
 private Renderer render;
 private double errorLevel = Double.MAX_VALUE;
 //Imagen pequeña 200x234 chicaPerla.jpg
+//Imagen ch 300x352 chPerla.jpg
 //Imagen mediana 600x703 medPerla.jpg
 //Imagen grande 1200x1300 grandPerla.jpg
-public int MaxWidth = 200;
-public int MaxHeight = 234;
+//Imagen grande 950x1050  grandPC.jpeg
+public int MaxWidth = 950;
+public int MaxHeight = 1050;
 PFont f;
 PImage target ;
 void setup(){
-  size(200,234);
+  size(950,1050);
   f = createFont("Courier", 12, true);
   loadPixels();
-  target = loadImage("/data/chicaPerla.jpg");
+  target = loadImage("/data/grandPC.jpeg");
   updatePixels();
    render = new Renderer();
   setupSourceColorMatrix();
